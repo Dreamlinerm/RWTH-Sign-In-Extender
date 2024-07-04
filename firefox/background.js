@@ -1,6 +1,5 @@
 async function setExpirationDate() {
   let cookies = await browser.cookies.getAll({ domain: "rwth-aachen.de" });
-  //   console.log("cookies", cookies);
   // check if the name contains "session" and the value is not empty
   let sessionCookies = cookies.filter(
     (cookie) =>

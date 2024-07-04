@@ -1,6 +1,5 @@
 async function setExpirationDate() {
-  let cookies = await browser.cookies.getAll({ domain: "rwth-aachen.de" });
-  //   console.log("cookies", cookies);
+  let cookies = await chrome.cookies.getAll({ domain: "rwth-aachen.de" });
   // check if the name contains "session" and the value is not empty
   let sessionCookies = cookies.filter(
     (cookie) =>
@@ -11,7 +10,7 @@ async function setExpirationDate() {
   let expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + 14);
   for (let cookie of sessionCookies) {
-    await browser.cookies.set({
+    await chrome.cookies.set({
       url: `https://${cookie.domain}${cookie.path}`,
       name: cookie.name,
       value: cookie.value,
@@ -20,6 +19,6 @@ async function setExpirationDate() {
   }
   return cookies;
 }
-browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   setExpirationDate();
 });

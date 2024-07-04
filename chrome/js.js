@@ -1,4 +1,4 @@
-browser.runtime.sendMessage({
+chrome.runtime.sendMessage({
   type: "setExpirationDate",
 });
 

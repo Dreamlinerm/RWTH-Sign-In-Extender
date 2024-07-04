@@ -11,7 +11,7 @@ if (!fs.existsSync("chrome")) {
 // Read all the firefox files and replace the chrome files
 const files = ["js.js", "background.js"];
 // all regex replacements
-const replaces = [];
+const replaces = [[/browser([^-])/g, "chrome$1"]];
 console.log("Copy Files from Firefox to Chrome:");
 for (let file of files) {
   fs.readFile(path.join("firefox", file), "utf8", function (err, data) {

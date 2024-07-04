@@ -9,9 +9,9 @@
       "js": ["js.js"]
     }
   ],
-
   "background": {
-    "service_worker": ["background.js"]
+    "service_worker": "background.js"
   },
-  "permissions": ["cookies", "*://*.rwth-aachen.de/*"]
+  "host_permissions": ["*://*.rwth-aachen.de/*"],
+  "permissions": ["cookies"]
 }
