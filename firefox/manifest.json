@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Moodle-Cookie-Prologer",
+  "version": "1.0",
+  "description": "All sign in cookie lenghts are prologed to 2 days.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.rwth-aachen.de/*"],
+      "js": ["js.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["cookies", "*://*.rwth-aachen.de/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "MoodleCookie@adjuster.com"
+    }
+  }
+}
