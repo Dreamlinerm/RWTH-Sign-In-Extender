@@ -1,2 +1,2 @@
-# rwth-moodle-cookie
+# RWTH-Sign-In-Extender
  
