@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Moodle-Cookie-Prologer",
+  "name": "RWTH Sign-In Extender",
   "version": "1.0",
-  "description": "All sign in cookie lenghts are prologed to 2 days.",
+  "description": "All sign ins lengths are prologed by 2 weeks on the page rwth-aachen.de",
   "content_scripts": [
     {
       "matches": ["*://*.rwth-aachen.de/*"],
@@ -16,7 +16,7 @@
   "permissions": ["cookies", "*://*.rwth-aachen.de/*"],
   "browser_specific_settings": {
     "gecko": {
-      "id": "MoodleCookie@adjuster.com"
+      "id": "RWTH@adjuster.com"
     }
   }
 }

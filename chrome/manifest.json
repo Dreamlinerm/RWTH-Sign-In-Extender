@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Moodle-Cookie-Prologer",
+  "name": "RWTH Sign-In Extender",
   "version": "1.0",
   "description": "All sign in cookie lenghts are prologed to 2 days.",
   "content_scripts": [
