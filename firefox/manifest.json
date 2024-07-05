@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "RWTH Sign-In Extender",
-  "version": "1.0",
+  "version": "1.1",
   "description": "All sign ins lengths are prologed by 2 weeks on the page rwth-aachen.de",
   "homepage_url": "https://github.com/Dreamlinerm/RWTH-Sign-In-Extender",
   "icons": {
